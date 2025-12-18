@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Livora — Legal (Privacy Policy & Terms of Use)</title>
+    <style>
+      :root {
+        --bg: #0b1220;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel-strong: rgba(255, 255, 255, 0.1);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.7);
+        --faint: rgba(255, 255, 255, 0.55);
+        --border: rgba(255, 255, 255, 0.12);
+        --accent: #2ec4b6;
+        --accent2: #ff9f1c;
+        --danger: #e71d36;
+        --radius: 16px;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+        --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        --serif: ui-serif, "New York", "Georgia", "Times New Roman", serif;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f7fafc;
+          --panel: rgba(15, 23, 42, 0.04);
+          --panel-strong: rgba(15, 23, 42, 0.07);
+          --text: rgba(2, 6, 23, 0.92);
+          --muted: rgba(2, 6, 23, 0.72);
+          --faint: rgba(2, 6, 23, 0.56);
+          --border: rgba(2, 6, 23, 0.12);
+          --shadow: 0 24px 80px rgba(2, 6, 23, 0.12);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--sans);
+        background: radial-gradient(1200px 800px at 12% 12%, rgba(46, 196, 182, 0.18), transparent 55%),
+          radial-gradient(1100px 700px at 92% 82%, rgba(255, 159, 28, 0.14), transparent 55%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 28px 18px 60px;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        backdrop-filter: blur(12px);
+        background: color-mix(in srgb, var(--bg) 85%, transparent);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero {
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 16px 0;
+      }
+
+      .title {
+        min-width: 0;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: var(--serif);
+        letter-spacing: 0.2px;
+        font-size: 22px;
+        font-weight: 650;
+      }
+
+      .subtitle {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .lang {
+        display: inline-flex;
+        gap: 6px;
+        align-items: center;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        border-radius: 999px;
+        padding: 6px 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .lang button {
+        appearance: none;
+        border: 1px solid transparent;
+        background: transparent;
+        color: var(--muted);
+        padding: 6px 10px;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      .lang button[aria-pressed="true"] {
+        color: var(--text);
+        background: color-mix(in srgb, var(--accent) 18%, transparent);
+        border-color: color-mix(in srgb, var(--accent) 38%, transparent);
+      }
+
+      .toplinks a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .toplinks a:hover {
+        color: var(--text);
+        text-decoration: none;
+        border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+      }
+
+      main {
+        padding-top: 18px;
+      }
+
+      .notice {
+        border: 1px solid var(--border);
+        background: var(--panel);
+        border-radius: var(--radius);
+        padding: 14px 16px;
+        color: var(--muted);
+        box-shadow: var(--shadow);
+      }
+      .notice strong {
+        color: var(--text);
+      }
+      .notice code {
+        font-family: var(--mono);
+        font-size: 12px;
+      }
+
+      .doc {
+        margin-top: 16px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        border-radius: var(--radius);
+        padding: 18px 18px 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .doc h2 {
+        margin: 0 0 8px;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+      }
+
+      .doc h3 {
+        margin: 18px 0 8px;
+        font-size: 14px;
+        color: var(--text);
+      }
+
+      .doc p,
+      .doc li {
+        color: var(--muted);
+      }
+
+      .meta {
+        margin-top: 8px;
+        font-size: 12px;
+        color: var(--faint);
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--border);
+        background: var(--panel-strong);
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .badge b {
+        color: var(--text);
+        font-weight: 650;
+      }
+
+      .kvs {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 12px 0 8px;
+      }
+      @media (min-width: 720px) {
+        .kvs {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .kv {
+        border: 1px solid var(--border);
+        background: rgba(0, 0, 0, 0.06);
+        border-radius: 14px;
+        padding: 12px;
+      }
+      @media (prefers-color-scheme: light) {
+        .kv {
+          background: rgba(2, 6, 23, 0.02);
+        }
+      }
+      .kv .k {
+        font-size: 12px;
+        color: var(--faint);
+        margin-bottom: 4px;
+      }
+      .kv .v {
+        color: var(--muted);
+        font-size: 13px;
+        word-break: break-word;
+      }
+
+      .divider {
+        height: 1px;
+        background: var(--border);
+        margin: 16px 0;
+      }
+
+      footer {
+        margin-top: 22px;
+        color: var(--faint);
+        font-size: 12px;
+      }
+
+      .lang-block {
+        display: none;
+      }
+      .lang-block[data-active="true"] {
+        display: block;
+      }
+
+      @media print {
+        header {
+          position: static;
+          backdrop-filter: none;
+        }
+        .toplinks,
+        .lang,
+        .notice {
+          display: none !important;
+        }
+        body {
+          background: #fff;
+          color: #000;
+        }
+        .doc {
+          box-shadow: none;
+          border: 1px solid #ddd;
+        }
+        a {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="hero">
+          <div class="title">
+            <h1>Livora — Legal</h1>
+            <div class="subtitle">Privacy Policy &amp; Terms of Use (multi-language, single HTML)</div>
+          </div>
+          <div class="pill-row">
+            <div class="toplinks" aria-label="Quick links">
+              <a href="#privacy" id="jump-privacy">Privacy</a>
+              <a href="#terms" id="jump-terms">Terms</a>
+            </div>
+            <div class="lang" role="group" aria-label="Language">
+              <button type="button" data-lang="en" aria-pressed="true">EN</button>
+              <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+              <button type="button" data-lang="es" aria-pressed="false">ES</button>
+              <button type="button" data-lang="de" aria-pressed="false">DE</button>
+              <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+              <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- EN -->
+      <section class="lang-block" data-lang="en" data-active="true">
+        <article class="doc" aria-labelledby="en-privacy-title">
+          <h2 id="privacy">
+            <span id="en-privacy-title">Privacy Policy</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>Publisher</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>Last updated</b> 2025-12-18</span>
+            <span class="badge"><b>Contact</b> <span style="font-family: var(--mono)">asupriifgøgmail.com</span></span>
+          </div>
+
+          <p>
+            Livora is designed for privacy. By default, your data stays on your device. We do not run ads and we do not
+            use analytics or tracking SDKs.
+          </p>
+
+          <h3>1) What data Livora stores</h3>
+          <p>Livora stores the following information locally on your device:</p>
+          <ul>
+            <li><b>Profile</b> (e.g., birth date, country, preferences such as display mode).</li>
+            <li><b>Journal</b> (mood, notes, tags) and <b>goals</b> you create.</li>
+            <li><b>Notification settings</b> (times and toggles) if you enable reminders.</li>
+          </ul>
+
+          <h3>2) What data Livora does not collect</h3>
+          <ul>
+            <li>No account creation required.</li>
+            <li>No server-side storage by default.</li>
+            <li>No advertising identifiers, no cross-app tracking, no third-party analytics.</li>
+          </ul>
+
+          <h3>3) In-App Purchases (subscriptions)</h3>
+          <p>
+            Livora may offer auto-renewable subscriptions via Apple’s In-App Purchase. Apple processes payments and
+            subscription management. Livora only checks your purchase entitlement status to unlock Premium features. We
+            do not receive your payment details.
+          </p>
+
+          <h3>4) Notifications</h3>
+          <p>
+            If you enable notifications, Livora schedules local notifications on your device. You can change or disable
+            them at any time in the app or in iOS Settings.
+          </p>
+
+          <h3>5) Exports</h3>
+          <p>
+            Livora currently does not provide data export features. Your data stays on your device.
+          </p>
+
+          <h3>6) Data retention and deletion</h3>
+          <p>
+            Livora stores your data locally until you delete it by removing entries, resetting the app data, or
+            uninstalling the app.
+          </p>
+
+          <h3>7) Your rights</h3>
+          <p>
+            Because Livora stores data locally on your device by default, you can access or delete your data directly from
+            the app.
+          </p>
+
+          <h3>8) Children</h3>
+          <p>Livora is not intended for children under 13. If you believe a child provided data, delete the app data.</p>
+
+          <h3>9) Changes</h3>
+          <p>
+            We may update this policy. The “Last updated” date will change accordingly. Your continued use of Livora
+            after changes means you accept the updated policy.
+          </p>
+        </article>
+
+        <article class="doc" aria-labelledby="en-terms-title">
+          <h2 id="terms">
+            <span id="en-terms-title">Terms of Use</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>Publisher</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>Last updated</b> 2025-12-18</span>
+            <span class="badge"
+              ><b>Apple Standard EULA</b>
+              <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Link</a></span
+            >
+          </div>
+
+          <p>
+            By using Livora, you agree to these Terms. If you do not agree, do not use the app.
+          </p>
+
+          <h3>1) License</h3>
+          <p>
+            Your use of Livora is licensed, not sold. Unless otherwise stated, the Apple Standard EULA applies.
+          </p>
+
+          <h3>2) Premium features and subscriptions</h3>
+          <p>
+            Livora may offer Premium features through an auto-renewable subscription.
+          </p>
+          <ul>
+            <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
+            <li>The subscription renews automatically unless canceled at least 24 hours before the end of the period.</li>
+            <li>You can manage or cancel your subscription in your Apple ID settings (Subscriptions).</li>
+            <li>If a free trial is offered, any unused portion is forfeited when you purchase a subscription.</li>
+          </ul>
+
+          <h3>3) Acceptable use</h3>
+          <p>You agree not to misuse Livora, including by attempting to disrupt, reverse engineer, or bypass licensing.</p>
+
+          <h3>4) Health disclaimer</h3>
+          <p>
+            Livora is a wellbeing and journaling tool. It does not provide medical advice, diagnosis, or treatment. If you
+            are experiencing distress, seek professional help.
+          </p>
+
+          <h3>5) Changes and availability</h3>
+          <p>
+            We may modify, suspend, or discontinue Livora features at any time. We may also update these Terms.
+          </p>
+
+          <h3>6) Limitation of liability</h3>
+          <p>
+            To the maximum extent permitted by law, Livora is provided “as is” without warranties. We are not liable for
+            indirect damages or loss of data. Your local laws may provide additional rights.
+          </p>
+
+          <h3>7) Contact</h3>
+          <p>
+            Questions about these Terms: <span style="font-family: var(--mono)">asupriifgøgmail.com</span>.
+          </p>
+        </article>
+      </section>
+
+      <!-- FR -->
+      <section class="lang-block" data-lang="fr">
+        <article class="doc" aria-labelledby="fr-privacy-title">
+          <h2 id="privacy">
+            <span id="fr-privacy-title">Politique de confidentialité</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>Éditeur</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>Dernière mise à jour</b> 2025-12-18</span>
+            <span class="badge"><b>Contact</b> <span style="font-family: var(--mono)">asupriifgøgmail.com</span></span>
+          </div>
+
+          <p>
+            Livora est conçue pour respecter ta vie privée. Par défaut, tes données restent sur ton appareil. Nous
+            n’affichons pas de publicité et nous n’utilisons pas de SDK d’analytics ou de tracking.
+          </p>
+
+          <h3>1) Quelles données Livora enregistre</h3>
+          <p>Livora enregistre localement sur ton appareil :</p>
+          <ul>
+            <li><b>Profil</b> (ex. date de naissance, pays, préférences comme le mode d’affichage).</li>
+            <li><b>Journal</b> (humeur, notes, tags) et <b>objectifs</b> que tu crées.</li>
+            <li><b>Réglages de notifications</b> (heures et options) si tu actives les rappels.</li>
+          </ul>
+
+          <h3>2) Ce que Livora ne collecte pas</h3>
+          <ul>
+            <li>Pas de création de compte.</li>
+            <li>Pas de stockage sur serveur par défaut.</li>
+            <li>Pas d’identifiant publicitaire, pas de tracking inter-apps, pas d’analytics tiers.</li>
+          </ul>
+
+          <h3>3) Achats intégrés (abonnements)</h3>
+          <p>
+            Livora peut proposer des abonnements auto-renouvelables via l’Achat Intégré Apple. Apple traite le paiement
+            et la gestion de l’abonnement. Livora vérifie uniquement l’état de tes droits d’achat pour débloquer les
+            fonctionnalités Premium. Nous ne recevons pas tes informations de paiement.
+          </p>
+
+          <h3>4) Notifications</h3>
+          <p>
+            Si tu actives les notifications, Livora planifie des notifications locales sur ton appareil. Tu peux les
+            modifier ou les désactiver à tout moment dans l’app ou dans les réglages iOS.
+          </p>
+
+          <h3>5) Exports</h3>
+          <p>
+            Livora ne propose pas de fonctionnalité d’export de données pour le moment. Tes données restent sur ton
+            appareil.
+          </p>
+
+          <h3>6) Conservation et suppression</h3>
+          <p>
+            Livora conserve tes données localement jusqu’à suppression (suppression d’entrées, réinitialisation des
+            données de l’app, ou désinstallation).
+          </p>
+
+          <h3>7) Tes droits</h3>
+          <p>
+            Comme les données restent sur ton appareil par défaut, tu peux y accéder ou les supprimer directement depuis
+            l’app.
+          </p>
+
+          <h3>8) Enfants</h3>
+          <p>Livora n’est pas destinée aux enfants de moins de 13 ans. Si besoin, supprime les données de l’app.</p>
+
+          <h3>9) Modifications</h3>
+          <p>
+            Nous pouvons mettre à jour cette politique. La date “Dernière mise à jour” sera modifiée. Continuer à utiliser
+            Livora après modification signifie accepter la nouvelle version.
+          </p>
+        </article>
+
+        <article class="doc" aria-labelledby="fr-terms-title">
+          <h2 id="terms">
+            <span id="fr-terms-title">Conditions d’utilisation</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>Éditeur</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>Dernière mise à jour</b> 2025-12-18</span>
+            <span class="badge"
+              ><b>EULA standard Apple</b>
+              <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Lien</a></span
+            >
+          </div>
+
+          <p>
+            En utilisant Livora, tu acceptes ces conditions. Si tu n’es pas d’accord, n’utilise pas l’app.
+          </p>
+
+          <h3>1) Licence</h3>
+          <p>
+            L’utilisation de Livora est concédée sous licence, et non vendue. Sauf mention contraire, l’EULA standard Apple
+            s’applique.
+          </p>
+
+          <h3>2) Premium et abonnements</h3>
+          <p>Livora peut proposer des fonctionnalités Premium via un abonnement auto‑renouvelable.</p>
+          <ul>
+            <li>Le paiement est débité sur ton compte Apple ID lors de la confirmation.</li>
+            <li>L’abonnement se renouvelle automatiquement sauf annulation au moins 24 h avant la fin de la période.</li>
+            <li>Tu peux gérer/annuler l’abonnement dans les réglages Apple ID (Abonnements).</li>
+            <li>En cas d’essai gratuit, toute période non utilisée est perdue lors de l’achat de l’abonnement.</li>
+          </ul>
+
+          <h3>3) Usage acceptable</h3>
+          <p>
+            Tu t’engages à ne pas détourner l’app (ex. perturbation, rétro‑ingénierie, contournement de la licence).
+          </p>
+
+          <h3>4) Avertissement bien‑être</h3>
+          <p>
+            Livora est un outil de bien‑être et de journalisation. Elle ne fournit pas de conseil médical, diagnostic ou
+            traitement. En cas de détresse, contacte un professionnel.
+          </p>
+
+          <h3>5) Modifications et disponibilité</h3>
+          <p>
+            Nous pouvons modifier, suspendre ou arrêter des fonctionnalités. Nous pouvons également mettre à jour ces
+            conditions.
+          </p>
+
+          <h3>6) Limitation de responsabilité</h3>
+          <p>
+            Dans les limites prévues par la loi, Livora est fournie “en l’état”, sans garantie. Nous ne sommes pas
+            responsables des dommages indirects ou de la perte de données. Tes lois locales peuvent t’accorder des droits
+            supplémentaires.
+          </p>
+
+          <h3>7) Contact</h3>
+          <p>Questions : <span style="font-family: var(--mono)">asupriifgøgmail.com</span>.</p>
+        </article>
+      </section>
+
+      <!-- ES -->
+      <section class="lang-block" data-lang="es">
+        <article class="doc" aria-labelledby="es-privacy-title">
+          <h2 id="privacy">
+            <span id="es-privacy-title">Política de privacidad</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>Editor</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>Última actualización</b> 2025-12-18</span>
+            <span class="badge"><b>Contacto</b> <span style="font-family: var(--mono)">asupriifgøgmail.com</span></span>
+          </div>
+
+          <p>
+            Livora está diseñada para la privacidad. Por defecto, tus datos se quedan en tu dispositivo. No mostramos
+            anuncios y no usamos SDKs de analítica o rastreo.
+          </p>
+
+          <h3>1) Qué datos guarda Livora</h3>
+          <p>Livora guarda localmente en tu dispositivo:</p>
+          <ul>
+            <li><b>Perfil</b> (p. ej., fecha de nacimiento, país, preferencias como el modo de visualización).</li>
+            <li><b>Diario</b> (estado de ánimo, notas, etiquetas) y <b>objetivos</b> que creas.</li>
+            <li><b>Ajustes de notificaciones</b> (horas y opciones) si activas recordatorios.</li>
+          </ul>
+
+          <h3>2) Qué no recopila Livora</h3>
+          <ul>
+            <li>No se requiere cuenta.</li>
+            <li>No hay almacenamiento en servidor por defecto.</li>
+            <li>No hay identificadores publicitarios, ni rastreo entre apps, ni analítica de terceros.</li>
+          </ul>
+
+          <h3>3) Compras dentro de la app (suscripciones)</h3>
+          <p>
+            Livora puede ofrecer suscripciones auto-renovables mediante Apple. Apple procesa los pagos y la gestión de la
+            suscripción. Livora solo verifica el estado de tu derecho de compra para desbloquear Premium. No recibimos tus
+            datos de pago.
+          </p>
+
+          <h3>4) Notificaciones</h3>
+          <p>
+            Si activas notificaciones, Livora programa notificaciones locales en tu dispositivo. Puedes modificarlas o
+            desactivarlas en cualquier momento en la app o en Ajustes de iOS.
+          </p>
+
+          <h3>5) Exportaciones</h3>
+          <p>
+            Actualmente, Livora no ofrece funciones de exportación de datos. Tus datos se quedan en tu dispositivo.
+          </p>
+
+          <h3>6) Conservación y eliminación</h3>
+          <p>
+            Los datos se guardan localmente hasta que los elimines (borrando entradas, reiniciando datos o desinstalando la
+            app).
+          </p>
+
+          <h3>7) Tus derechos</h3>
+          <p>
+            Como los datos están en tu dispositivo por defecto, puedes acceder o eliminar los datos desde la app.
+          </p>
+
+          <h3>8) Niños</h3>
+          <p>Livora no está destinada a menores de 13 años. Si es necesario, elimina los datos de la app.</p>
+
+          <h3>9) Cambios</h3>
+          <p>
+            Podemos actualizar esta política. La fecha “Última actualización” cambiará. El uso continuado implica
+            aceptación.
+          </p>
+        </article>
+
+        <article class="doc" aria-labelledby="es-terms-title">
+          <h2 id="terms">
+            <span id="es-terms-title">Términos de uso</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>Editor</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>Última actualización</b> 2025-12-18</span>
+            <span class="badge"
+              ><b>EULA estándar de Apple</b>
+              <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Enlace</a></span
+            >
+          </div>
+
+          <p>Al usar Livora, aceptas estos términos. Si no estás de acuerdo, no uses la app.</p>
+
+          <h3>1) Licencia</h3>
+          <p>El uso de Livora se licencia, no se vende. Salvo indicación contraria, aplica el EULA estándar de Apple.</p>
+
+          <h3>2) Premium y suscripciones</h3>
+          <p>Livora puede ofrecer funciones Premium mediante suscripción auto-renovable.</p>
+          <ul>
+            <li>El pago se carga a tu cuenta de Apple ID al confirmar la compra.</li>
+            <li>Se renueva automáticamente salvo cancelación al menos 24 h antes del final del periodo.</li>
+            <li>Puedes gestionar o cancelar la suscripción en Ajustes de Apple ID (Suscripciones).</li>
+            <li>Si hay prueba gratuita, la parte no utilizada se pierde al comprar la suscripción.</li>
+          </ul>
+
+          <h3>3) Uso aceptable</h3>
+          <p>No debes hacer un uso indebido (p. ej., interrumpir, ingeniería inversa, o eludir la licencia).</p>
+
+          <h3>4) Aviso de bienestar</h3>
+          <p>
+            Livora es una herramienta de bienestar y diario. No ofrece consejo médico, diagnóstico ni tratamiento. Si
+            necesitas ayuda, consulta a un profesional.
+          </p>
+
+          <h3>5) Cambios y disponibilidad</h3>
+          <p>Podemos modificar, suspender o discontinuar funciones, y actualizar estos términos.</p>
+
+          <h3>6) Limitación de responsabilidad</h3>
+          <p>
+            En la máxima medida permitida por la ley, Livora se proporciona “tal cual”, sin garantías. No somos responsables
+            de daños indirectos o pérdida de datos. Tus leyes locales pueden otorgarte derechos adicionales.
+          </p>
+
+          <h3>7) Contacto</h3>
+          <p>Preguntas: <span style="font-family: var(--mono)">asupriifgøgmail.com</span>.</p>
+        </article>
+      </section>
+
+      <!-- DE -->
+      <section class="lang-block" data-lang="de">
+        <article class="doc" aria-labelledby="de-privacy-title">
+          <h2 id="privacy">
+            <span id="de-privacy-title">Datenschutzerklärung</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>Anbieter</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>Zuletzt aktualisiert</b> 2025-12-18</span>
+            <span class="badge"><b>Kontakt</b> <span style="font-family: var(--mono)">asupriifgøgmail.com</span></span>
+          </div>
+
+          <p>
+            Livora ist auf Privatsphäre ausgelegt. Standardmäßig bleiben deine Daten auf deinem Gerät. Wir zeigen keine
+            Werbung und verwenden keine Analytics- oder Tracking-SDKs.
+          </p>
+
+          <h3>1) Welche Daten Livora speichert</h3>
+          <p>Livora speichert lokal auf deinem Gerät:</p>
+          <ul>
+            <li><b>Profil</b> (z. B. Geburtsdatum, Land, Einstellungen wie Anzeigemodus).</li>
+            <li><b>Tagebuch</b> (Stimmung, Notizen, Tags) und <b>Ziele</b>, die du erstellst.</li>
+            <li><b>Benachrichtigungseinstellungen</b> (Zeiten und Schalter), wenn du Erinnerungen aktivierst.</li>
+          </ul>
+
+          <h3>2) Was Livora nicht erhebt</h3>
+          <ul>
+            <li>Kein Konto erforderlich.</li>
+            <li>Keine serverseitige Speicherung standardmäßig.</li>
+            <li>Keine Werbe-IDs, kein Cross‑App‑Tracking, keine Drittanbieter-Analytics.</li>
+          </ul>
+
+          <h3>3) In‑App‑Käufe (Abonnements)</h3>
+          <p>
+            Livora kann automatisch verlängernde Abonnements über Apple anbieten. Apple verarbeitet Zahlungen und
+            Abonnementverwaltung. Livora prüft nur deinen Entitlement-Status, um Premium freizuschalten. Wir erhalten keine
+            Zahlungsdetails.
+          </p>
+
+          <h3>4) Benachrichtigungen</h3>
+          <p>
+            Wenn du Benachrichtigungen aktivierst, plant Livora lokale Benachrichtigungen auf deinem Gerät. Du kannst sie
+            jederzeit in der App oder in iOS‑Einstellungen ändern oder deaktivieren.
+          </p>
+
+          <h3>5) Exporte</h3>
+          <p>
+            Livora bietet derzeit keine Daten‑Exportfunktionen. Deine Daten bleiben auf deinem Gerät.
+          </p>
+
+          <h3>6) Aufbewahrung und Löschung</h3>
+          <p>
+            Daten werden lokal gespeichert, bis du sie löschst (Einträge löschen, App-Daten zurücksetzen oder App
+            deinstallieren).
+          </p>
+
+          <h3>7) Deine Rechte</h3>
+          <p>
+            Da die Daten standardmäßig lokal liegen, kannst du sie in der App einsehen oder löschen.
+          </p>
+
+          <h3>8) Kinder</h3>
+          <p>Livora ist nicht für Kinder unter 13 gedacht. Falls nötig, lösche die App‑Daten.</p>
+
+          <h3>9) Änderungen</h3>
+          <p>
+            Wir können diese Erklärung aktualisieren. Das Datum “Zuletzt aktualisiert” ändert sich entsprechend.
+          </p>
+        </article>
+
+        <article class="doc" aria-labelledby="de-terms-title">
+          <h2 id="terms">
+            <span id="de-terms-title">Nutzungsbedingungen</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>Anbieter</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>Zuletzt aktualisiert</b> 2025-12-18</span>
+            <span class="badge"
+              ><b>Apple Standard‑EULA</b>
+              <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Link</a></span
+            >
+          </div>
+
+          <p>Durch die Nutzung von Livora stimmst du diesen Bedingungen zu. Wenn nicht, nutze die App nicht.</p>
+
+          <h3>1) Lizenz</h3>
+          <p>Die Nutzung ist lizenziert, nicht verkauft. Sofern nicht anders angegeben, gilt die Apple Standard‑EULA.</p>
+
+          <h3>2) Premium und Abonnements</h3>
+          <p>Livora kann Premium‑Funktionen über ein automatisch verlängerndes Abonnement anbieten.</p>
+          <ul>
+            <li>Die Zahlung wird deinem Apple‑ID‑Konto bei Bestätigung belastet.</li>
+            <li>Automatische Verlängerung, sofern nicht mindestens 24 h vor Ablauf gekündigt wird.</li>
+            <li>Verwalten/Kündigen in den Apple‑ID‑Einstellungen (Abonnements).</li>
+            <li>Bei kostenlosem Probezeitraum verfällt ein ungenutzter Teil beim Kauf.</li>
+          </ul>
+
+          <h3>3) Zulässige Nutzung</h3>
+          <p>Keine missbräuchliche Nutzung (z. B. Störung, Reverse Engineering, Umgehung der Lizenz).</p>
+
+          <h3>4) Wohlbefinden‑Hinweis</h3>
+          <p>
+            Livora ist ein Wohlbefinden‑ und Tagebuch‑Tool und ersetzt keine medizinische Beratung. Bei Belastung suche
+            professionelle Hilfe.
+          </p>
+
+          <h3>5) Änderungen und Verfügbarkeit</h3>
+          <p>Wir können Funktionen ändern, aussetzen oder einstellen sowie diese Bedingungen aktualisieren.</p>
+
+          <h3>6) Haftungsbeschränkung</h3>
+          <p>
+            Soweit gesetzlich zulässig wird Livora „wie besehen“ ohne Gewähr bereitgestellt. Keine Haftung für indirekte
+            Schäden oder Datenverlust. Lokale Gesetze können weitere Rechte vorsehen.
+          </p>
+
+          <h3>7) Kontakt</h3>
+          <p>Fragen: <span style="font-family: var(--mono)">asupriifgøgmail.com</span>.</p>
+        </article>
+      </section>
+
+      <!-- ZH (Simplified) -->
+      <section class="lang-block" data-lang="zh">
+        <article class="doc" aria-labelledby="zh-privacy-title">
+          <h2 id="privacy">
+            <span id="zh-privacy-title">隐私政策</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>发布者</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>更新日期</b> 2025-12-18</span>
+            <span class="badge"><b>联系邮箱</b> <span style="font-family: var(--mono)">asupriifgøgmail.com</span></span>
+          </div>
+
+          <p>
+            Livora 以隐私为先。默认情况下，你的数据保存在你的设备上。我们不展示广告，也不使用第三方统计/追踪 SDK。
+          </p>
+
+          <h3>1) Livora 会在本地保存哪些数据</h3>
+          <p>Livora 会在你的设备本地保存：</p>
+          <ul>
+            <li><b>个人资料</b>（例如：出生日期、国家/地区、显示模式等偏好）。</li>
+            <li><b>日记</b>（心情、笔记、标签）以及你创建的<b>目标</b>。</li>
+            <li><b>通知设置</b>（时间与开关），当你启用提醒时。</li>
+          </ul>
+
+          <h3>2) Livora 不会收集什么</h3>
+          <ul>
+            <li>无需注册账户。</li>
+            <li>默认不进行服务器端存储。</li>
+            <li>不使用广告标识符、不进行跨应用追踪、不使用第三方分析。</li>
+          </ul>
+
+          <h3>3) App 内购买（订阅）</h3>
+          <p>
+            Livora 可能通过 Apple 提供自动续订订阅。付款与订阅管理由 Apple 处理。Livora 仅检查你的购买权益状态以解锁
+            Premium 功能。我们不会获得你的支付信息。
+          </p>
+
+          <h3>4) 通知</h3>
+          <p>
+            如果你启用通知，Livora 会在设备上安排本地通知。你可随时在 App 内或 iOS 设置中修改或关闭。
+          </p>
+
+          <h3>5) 导出</h3>
+          <p>
+            目前 Livora 不提供数据导出功能。你的数据保存在你的设备上。
+          </p>
+
+          <h3>6) 数据保留与删除</h3>
+          <p>
+            数据会在本地保存，直到你删除内容、重置 App 数据或卸载 App。
+          </p>
+
+          <h3>7) 你的权利</h3>
+          <p>
+            因为数据默认在本地，你可以直接在 App 内查看或删除数据。
+          </p>
+
+          <h3>8) 儿童</h3>
+          <p>Livora 不面向 13 岁以下儿童。如有需要，请删除 App 数据。</p>
+
+          <h3>9) 变更</h3>
+          <p>我们可能更新本政策，并同步更新“更新日期”。继续使用即表示接受更新后的政策。</p>
+        </article>
+
+        <article class="doc" aria-labelledby="zh-terms-title">
+          <h2 id="terms">
+            <span id="zh-terms-title">使用条款</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>发布者</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>更新日期</b> 2025-12-18</span>
+            <span class="badge"
+              ><b>Apple 标准 EULA</b>
+              <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">链接</a></span
+            >
+          </div>
+
+          <p>使用 Livora 即表示你同意本条款；如不同意，请勿使用本 App。</p>
+
+          <h3>1) 许可</h3>
+          <p>Livora 以许可方式提供而非出售。除非另有说明，适用 Apple 标准 EULA。</p>
+
+          <h3>2) Premium 与订阅</h3>
+          <p>Livora 可能通过自动续订订阅提供 Premium 功能：</p>
+          <ul>
+            <li>费用将在确认购买时从你的 Apple ID 账户扣款。</li>
+            <li>除非在当前周期结束前至少 24 小时取消，否则将自动续订。</li>
+            <li>你可以在 Apple ID 设置（订阅）中管理或取消订阅。</li>
+            <li>如提供免费试用，购买订阅后未使用的试用期将作废。</li>
+          </ul>
+
+          <h3>3) 合理使用</h3>
+          <p>你不得滥用 Livora（例如：干扰运行、逆向工程、绕过许可）。</p>
+
+          <h3>4) 健康/心理提示</h3>
+          <p>
+            Livora 是用于记录与自我管理的工具，不提供医疗建议、诊断或治疗。如你感到困扰，请寻求专业帮助。
+          </p>
+
+          <h3>5) 变更与可用性</h3>
+          <p>我们可能修改、暂停或停止某些功能，也可能更新本条款。</p>
+
+          <h3>6) 责任限制</h3>
+          <p>
+            在法律允许范围内，Livora 按“现状”提供，不作保证。我们不对间接损失或数据丢失负责。你的当地法律可能赋予你额外权利。
+          </p>
+
+          <h3>7) 联系方式</h3>
+          <p>如有问题：<span style="font-family: var(--mono)">asupriifgøgmail.com</span>。</p>
+        </article>
+      </section>
+
+      <!-- JA -->
+      <section class="lang-block" data-lang="ja">
+        <article class="doc" aria-labelledby="ja-privacy-title">
+          <h2 id="privacy">
+            <span id="ja-privacy-title">プライバシーポリシー</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>提供者</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>最終更新日</b> 2025-12-18</span>
+            <span class="badge"><b>連絡先</b> <span style="font-family: var(--mono)">asupriifgøgmail.com</span></span>
+          </div>
+
+          <p>
+            Livora はプライバシーを重視して設計されています。既定ではデータは端末内に保存されます。広告は表示せず、解析/追跡
+            SDK は使用しません。
+          </p>
+
+          <h3>1) Livora が保存するデータ</h3>
+          <p>Livora は以下を端末内に保存します：</p>
+          <ul>
+            <li><b>プロフィール</b>（例：生年月日、国/地域、表示モード等の設定）。</li>
+            <li><b>ジャーナル</b>（気分、メモ、タグ）と作成した<b>目標</b>。</li>
+            <li><b>通知設定</b>（時間・オン/オフ）— リマインダーを有効化した場合。</li>
+          </ul>
+
+          <h3>2) Livora が収集しないもの</h3>
+          <ul>
+            <li>アカウント登録不要。</li>
+            <li>既定でサーバー保存なし。</li>
+            <li>広告 ID なし、アプリ間追跡なし、第三者アナリティクスなし。</li>
+          </ul>
+
+          <h3>3) アプリ内課金（サブスクリプション）</h3>
+          <p>
+            Livora は Apple の自動更新サブスクリプションを提供する場合があります。支払いとサブスク管理は Apple が処理します。
+            Livora は Premium の解放のために購入権利（entitlement）状態のみを確認します。支払い情報は受け取りません。
+          </p>
+
+          <h3>4) 通知</h3>
+          <p>
+            通知を有効にした場合、Livora は端末上でローカル通知をスケジュールします。アプリ内または iOS 設定でいつでも変更/無効化できます。
+          </p>
+
+          <h3>5) 書き出し</h3>
+          <p>
+            現在、Livora はデータの書き出し機能を提供していません。データは端末内に保存されます。
+          </p>
+
+          <h3>6) 保存期間と削除</h3>
+          <p>データは端末内に保存され、削除/リセット/アンインストールにより消去されます。</p>
+
+          <h3>7) あなたの権利</h3>
+          <p>データが端末内にあるため、アプリから閲覧・削除が可能です。</p>
+
+          <h3>8) 子ども</h3>
+          <p>Livora は 13 歳未満を対象としていません。必要に応じてアプリデータを削除してください。</p>
+
+          <h3>9) 変更</h3>
+          <p>本ポリシーを更新する場合があります。更新日が変更されます。継続利用は更新への同意を意味します。</p>
+        </article>
+
+        <article class="doc" aria-labelledby="ja-terms-title">
+          <h2 id="terms">
+            <span id="ja-terms-title">利用規約</span>
+          </h2>
+          <div class="meta">
+            <span class="badge"><b>App</b> Livora</span>
+            <span class="badge"><b>提供者</b> Thomas Piquepaille (France)</span>
+            <span class="badge"><b>最終更新日</b> 2025-12-18</span>
+            <span class="badge"
+              ><b>Apple 標準 EULA</b>
+              <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">リンク</a></span
+            >
+          </div>
+
+          <p>Livora を利用することで本規約に同意したものとみなされます。同意しない場合は利用しないでください。</p>
+
+          <h3>1) ライセンス</h3>
+          <p>Livora は販売ではなくライセンス提供です。特段の定めがない限り Apple 標準 EULA が適用されます。</p>
+
+          <h3>2) Premium とサブスクリプション</h3>
+          <p>Livora は自動更新サブスクにより Premium 機能を提供する場合があります：</p>
+          <ul>
+            <li>購入確定時に Apple ID に課金されます。</li>
+            <li>現在の期間終了の 24 時間以上前に解約しない限り自動更新されます。</li>
+            <li>Apple ID 設定（サブスクリプション）で管理/解約できます。</li>
+            <li>無料トライアルがある場合、サブスク購入時に未使用分は失効します。</li>
+          </ul>
+
+          <h3>3) 禁止事項</h3>
+          <p>妨害、リバースエンジニアリング、ライセンス回避などの不正利用は禁止です。</p>
+
+          <h3>4) 免責（ウェルビーイング）</h3>
+          <p>
+            Livora はウェルビーイング/記録ツールであり、医療アドバイス・診断・治療を提供しません。困っている場合は専門家に相談してください。
+          </p>
+
+          <h3>5) 変更と提供</h3>
+          <p>機能の変更/停止や規約の更新を行う場合があります。</p>
+
+          <h3>6) 責任制限</h3>
+          <p>
+            法令で許される範囲で、Livora は現状有姿で提供され、保証はありません。間接損害やデータ損失について責任を負いません。地域の法律により追加の権利が認められる場合があります。
+          </p>
+
+          <h3>7) 連絡先</h3>
+          <p>お問い合わせ：<span style="font-family: var(--mono)">asupriifgøgmail.com</span></p>
+        </article>
+      </section>
+
+      <footer>
+        <div class="divider"></div>
+        <p>
+          Tip: host this file as-is (single page) or split into separate URLs later. Update contact details and dates
+          before publishing.
+        </p>
+      </footer>
+    </main>
+
+    <script>
+      (function () {
+        var supported = ["en", "fr", "es", "de", "zh", "ja"];
+
+        function normalize(lang) {
+          if (!lang) return "en";
+          lang = String(lang).toLowerCase();
+          if (lang.startsWith("zh")) return "zh";
+          if (lang.startsWith("ja")) return "ja";
+          return lang.slice(0, 2);
+        }
+
+        function setActive(lang) {
+          var chosen = supported.includes(lang) ? lang : "en";
+          document.documentElement.lang = chosen;
+
+          document.querySelectorAll(".lang-block").forEach(function (node) {
+            node.dataset.active = node.dataset.lang === chosen ? "true" : "false";
+          });
+
+          document.querySelectorAll(".lang button[data-lang]").forEach(function (btn) {
+            btn.setAttribute("aria-pressed", btn.dataset.lang === chosen ? "true" : "false");
+          });
+
+          // Update quick links text
+          var t = {
+            en: { privacy: "Privacy", terms: "Terms" },
+            fr: { privacy: "Confidentialité", terms: "Conditions" },
+            es: { privacy: "Privacidad", terms: "Términos" },
+            de: { privacy: "Datenschutz", terms: "Bedingungen" },
+            zh: { privacy: "隐私", terms: "条款" },
+            ja: { privacy: "プライバシー", terms: "規約" },
+          }[chosen];
+          var p = document.getElementById("jump-privacy");
+          var tr = document.getElementById("jump-terms");
+          if (p && t) p.textContent = t.privacy;
+          if (tr && t) tr.textContent = t.terms;
+
+          try {
+            localStorage.setItem("livora_legal_lang", chosen);
+          } catch (_) {}
+        }
+
+        function init() {
+          var saved = null;
+          try {
+            saved = localStorage.getItem("livora_legal_lang");
+          } catch (_) {}
+          var initial = normalize(saved || navigator.language || "en");
+          setActive(initial);
+
+          document.querySelectorAll(".lang button[data-lang]").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              setActive(btn.dataset.lang);
+            });
+          });
+        }
+
+        init();
+      })();
+    </script>
+  </body>
+</html>
