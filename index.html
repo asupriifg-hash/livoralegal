@@ -331,7 +331,7 @@
       <!-- EN -->
       <section class="lang-block" data-lang="en" data-active="true">
         <article class="doc" aria-labelledby="en-privacy-title">
-          <h2 id="privacy">
+          <h2 id="privacy" data-anchor="privacy">
             <span id="en-privacy-title">Privacy Policy</span>
           </h2>
           <div class="meta">
@@ -402,7 +402,7 @@
         </article>
 
         <article class="doc" aria-labelledby="en-terms-title">
-          <h2 id="terms">
+          <h2 id="terms" data-anchor="terms">
             <span id="en-terms-title">Terms of Use</span>
           </h2>
           <div class="meta">
@@ -465,7 +465,7 @@
       <!-- FR -->
       <section class="lang-block" data-lang="fr">
         <article class="doc" aria-labelledby="fr-privacy-title">
-          <h2 id="privacy">
+          <h2 id="privacy" data-anchor="privacy">
             <span id="fr-privacy-title">Politique de confidentialité</span>
           </h2>
           <div class="meta">
@@ -537,7 +537,7 @@
         </article>
 
         <article class="doc" aria-labelledby="fr-terms-title">
-          <h2 id="terms">
+          <h2 id="terms" data-anchor="terms">
             <span id="fr-terms-title">Conditions d’utilisation</span>
           </h2>
           <div class="meta">
@@ -601,7 +601,7 @@
       <!-- ES -->
       <section class="lang-block" data-lang="es">
         <article class="doc" aria-labelledby="es-privacy-title">
-          <h2 id="privacy">
+          <h2 id="privacy" data-anchor="privacy">
             <span id="es-privacy-title">Política de privacidad</span>
           </h2>
           <div class="meta">
@@ -671,7 +671,7 @@
         </article>
 
         <article class="doc" aria-labelledby="es-terms-title">
-          <h2 id="terms">
+          <h2 id="terms" data-anchor="terms">
             <span id="es-terms-title">Términos de uso</span>
           </h2>
           <div class="meta">
@@ -724,7 +724,7 @@
       <!-- DE -->
       <section class="lang-block" data-lang="de">
         <article class="doc" aria-labelledby="de-privacy-title">
-          <h2 id="privacy">
+          <h2 id="privacy" data-anchor="privacy">
             <span id="de-privacy-title">Datenschutzerklärung</span>
           </h2>
           <div class="meta">
@@ -793,7 +793,7 @@
         </article>
 
         <article class="doc" aria-labelledby="de-terms-title">
-          <h2 id="terms">
+          <h2 id="terms" data-anchor="terms">
             <span id="de-terms-title">Nutzungsbedingungen</span>
           </h2>
           <div class="meta">
@@ -846,7 +846,7 @@
       <!-- ZH (Simplified) -->
       <section class="lang-block" data-lang="zh">
         <article class="doc" aria-labelledby="zh-privacy-title">
-          <h2 id="privacy">
+          <h2 id="privacy" data-anchor="privacy">
             <span id="zh-privacy-title">隐私政策</span>
           </h2>
           <div class="meta">
@@ -909,7 +909,7 @@
         </article>
 
         <article class="doc" aria-labelledby="zh-terms-title">
-          <h2 id="terms">
+          <h2 id="terms" data-anchor="terms">
             <span id="zh-terms-title">使用条款</span>
           </h2>
           <div class="meta">
@@ -960,7 +960,7 @@
       <!-- JA -->
       <section class="lang-block" data-lang="ja">
         <article class="doc" aria-labelledby="ja-privacy-title">
-          <h2 id="privacy">
+          <h2 id="privacy" data-anchor="privacy">
             <span id="ja-privacy-title">プライバシーポリシー</span>
           </h2>
           <div class="meta">
@@ -1020,7 +1020,7 @@
         </article>
 
         <article class="doc" aria-labelledby="ja-terms-title">
-          <h2 id="terms">
+          <h2 id="terms" data-anchor="terms">
             <span id="ja-terms-title">利用規約</span>
           </h2>
           <div class="meta">
@@ -1089,6 +1089,14 @@
           return lang.slice(0, 2);
         }
 
+        function scrollToAnchor(chosen) {
+          var anchor = (window.location.hash || "").replace("#", "");
+          if (anchor !== "privacy" && anchor !== "terms") return;
+          var selector = '.lang-block[data-lang="' + chosen + '"] [data-anchor="' + anchor + '"]';
+          var target = document.querySelector(selector);
+          if (target) target.scrollIntoView({ block: "start" });
+        }
+
         function setActive(lang) {
           var chosen = supported.includes(lang) ? lang : "en";
           document.documentElement.lang = chosen;
@@ -1118,6 +1126,8 @@
           try {
             localStorage.setItem("livora_legal_lang", chosen);
           } catch (_) {}
+
+          scrollToAnchor(chosen);
         }
 
         function init() {
@@ -1125,13 +1135,19 @@
           try {
             saved = localStorage.getItem("livora_legal_lang");
           } catch (_) {}
-          var initial = normalize(saved || navigator.language || "en");
+          var params = new URLSearchParams(window.location.search);
+          var queryLang = params.get("lang");
+          var initial = normalize(queryLang || saved || navigator.language || "en");
           setActive(initial);
 
           document.querySelectorAll(".lang button[data-lang]").forEach(function (btn) {
             btn.addEventListener("click", function () {
               setActive(btn.dataset.lang);
             });
+          });
+
+          window.addEventListener("hashchange", function () {
+            scrollToAnchor(document.documentElement.lang || initial);
           });
         }
 
